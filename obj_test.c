@@ -3,32 +3,32 @@
 #include "obj_test.h"
 
 /* constructor */
-int obj_test_Ctor(struct obj_test_t* obj, const char* name, size_t len, int val)
+int obj_test_Ctor(struct obj_test_t** obj, const char* name, size_t len, int val)
 {
-	obj = (struct obj_test_t*) malloc(sizeof(struct obj_test_t));
-	if(obj == NULL)
+	*obj = (struct obj_test_t*) malloc(sizeof(struct obj_test_t));
+	if(*obj == NULL)
 		return 1;
 
-	obj->name = (char*) malloc(sizeof(char)*len);
-	if(obj->name == NULL)
+	(*obj)->name = (char*) malloc(sizeof(char)*len);
+	if((*obj)->name == NULL)
 	{
 		free(obj);
 		return 2;
 	}
 
-	obj->name = strncpy(obj->name, name, len);
+	(*obj)->name = strncpy((*obj)->name, name, len);
 
-	obj->len = len;
-	obj->val = val;
+	(*obj)->len = len;
+	(*obj)->val = val;
 
 	return 0;
 }
 
 /* destructor */
-void obj_test_Dtor(struct obj_test_t* obj)
+void obj_test_Dtor(struct obj_test_t** obj)
 {
-	free(obj->name);
-	free(obj);
+	free((*obj)->name);
+	free((*obj));
 }
 
 /* getters */

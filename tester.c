@@ -10,13 +10,13 @@ int obj_tester()
 
 	char* name = "Object";
 
-	obj_test_Ctor(obj, name, strlen(name), 9001);
+	obj_test_Ctor(&obj, name, strlen(name), 9001);
 
 	assert(obj != NULL);
 	assert(obj->val == 9001);
 	assert(obj->len == strlen(name));
 
-	obj_test_Dtor(obj);
+	obj_test_Dtor(&obj);
 
 	return 0;
 }

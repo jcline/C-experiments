@@ -6,10 +6,10 @@ struct obj_test_t
 };
 
 /* constructor */
-int obj_test_Ctor(struct obj_test_t* obj, const char* name, size_t len, int val);
+int obj_test_Ctor(struct obj_test_t** obj, const char* name, size_t len, int val);
 
 /* destructor */
-void obj_test_Dtor(struct obj_test_t* obj);
+void obj_test_Dtor(struct obj_test_t** obj);
 
 /* getters */
 char* obj_test_get_name(struct obj_test_t* obj);
