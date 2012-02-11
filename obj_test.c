@@ -52,7 +52,7 @@ void obj_test_set_name(struct obj_test_t* obj, const char* name, size_t len)
 	{
 		if(len > obj->len)
 		{
-			obj->name = (char*) realloc(sizeof(char)*len);
+			obj->name = (char*) realloc(obj->name, sizeof(char)*len);
 		}
 
 		obj->name = strncpy(obj->name, name, len);
