@@ -1,7 +1,7 @@
 #include <string.h>
 #include "obj_test.h"
 
-// constructor
+/* constructor */
 int obj_test_Ctor(struct obj_test_t* obj, const char* name, size_t len, int val)
 {
 	obj = (struct obj_test_t*) malloc(sizeof(struct obj_test_t));
@@ -23,14 +23,14 @@ int obj_test_Ctor(struct obj_test_t* obj, const char* name, size_t len, int val)
 	return 0;
 }
 
-// destructor
+/* destructor */
 void obj_test_Dtor(struct obj_test_t* obj)
 {
 	free(obj->name);
 	free(obj);
 }
 
-// getters
+/* getters */
 char* obj_test_get_name(struct obj_test_t* obj)
 {
 	if(obj)
@@ -45,7 +45,7 @@ int obj_test_get_val(struct obj_test_t* obj)
 	return 0;
 }
 
-// setters
+/* setters */
 void obj_test_set_name(struct obj_test_t* obj, const char* name, size_t len)
 {
 	if(obj)
