@@ -1,4 +1,5 @@
 #include <string.h>
+#include "obj_test.h"
 
 // constructor
 int obj_test_Ctor(struct obj_test_t* obj, const char* name, size_t len, int val)
