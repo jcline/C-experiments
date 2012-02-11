@@ -6,15 +6,19 @@
 
 int obj_tester()
 {
-	struct obj_test_t* obj;
+	struct obj_test_t* obj = NULL;
 
 	char* name = "Object";
 
 	obj_test_Ctor(obj, name, strlen(name), 9001);
 
-	assert(obj);
+	assert(obj != NULL);
 	assert(obj->val == 9001);
 	assert(obj->len == strlen(name));
+
+	obj_test_Dtor(obj);
+
+	return 0;
 }
 
 
