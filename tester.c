@@ -15,6 +15,7 @@ int obj_tester()
 	assert(obj != NULL);
 	assert(obj->val == 9001);
 	assert(obj->len == strlen(name));
+	assert(strcmp(obj->name, name) == 0);
 
 	obj_test_Dtor(&obj);
 
