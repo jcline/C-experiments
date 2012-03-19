@@ -1,9 +1,9 @@
+#ifndef POLY_TEST_A_H
+#define POLY_TEST_A_H
 
-struct poly_t
+struct poly_a_t
 {
-	int var;
-	char* name;
-	size_t len;
+	struct poly_t parent;
 };
 
-
+#endif
