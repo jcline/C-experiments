@@ -6,6 +6,9 @@ LINKER		= gcc
 
 SRC = \
   obj_test.c \
+	poly_test_parent.c \
+	poly_test_a_child.c \
+	poly_test_b_child.c \
 	tester.c
 
 
