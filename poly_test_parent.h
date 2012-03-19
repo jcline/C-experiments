@@ -11,17 +11,17 @@ struct poly_test_t
 };
 
 /* constructor */
-int poly_test_Ctor(struct poly_test_t** poly, const char* name, size_t len, int val);
+int poly_test_Ctor(struct poly_test_t** obj, const char* name, size_t len, int val);
 
 /* destructor */
-void poly_test_Dtor(struct poly_test_t** poly);
+void poly_test_Dtor(struct poly_test_t** obj);
 
 /* getters */
-char* poly_test_get_name(struct poly_test_t* poly);
-int poly_test_get_val(struct poly_test_t* poly);
+char* poly_test_get_name(struct poly_test_t* obj);
+int poly_test_get_val(struct poly_test_t* obj);
 
 /* setters */
-void poly_test_set_name(struct poly_test_t* poly, const char* name, size_t len);
-void poly_test_set_val(struct poly_test_t* poly, int val);
+void poly_test_set_name(struct poly_test_t* obj, const char* name, size_t len);
+void poly_test_set_val(struct poly_test_t* obj, int val);
 
 #endif
