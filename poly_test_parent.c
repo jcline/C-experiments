@@ -10,14 +10,14 @@ int poly_test_Ctor(struct poly_test_t** obj, const char* name, size_t len, int v
 	if(*obj == NULL)
 		return 1;
 
-	(*obj)->name = (char*) malloc(sizeof(char)*len);
+	(*obj)->name = (char*) malloc(sizeof(char)*(len+1));
 	if((*obj)->name == NULL)
 	{
 		free(obj);
 		return 2;
 	}
 
-	(*obj)->name = strncpy((*obj)->name, name, len);
+	(*obj)->name = strncpy((*obj)->name, name, len+1);
 
 	(*obj)->len = len;
 	(*obj)->val = val;

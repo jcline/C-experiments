@@ -1,5 +1,5 @@
 CC        = gcc
-CFLAGS    = -pedantic -Wall
+CFLAGS    = -pedantic -Wall $(DEBUGFLAG)
 OPTFLAG		= -O2
 DEBUGFLAG	= -g
 LINKER		= gcc
